@@ -1,0 +1,29 @@
+SchedulerService:
+    Db:
+        LogsConnString:
+            settings-key: SchedulerService-LogsConnString
+            types:
+              - AzureTableStorage
+    RabbitMq:
+        RabbitMqConnectionString:
+            settings-key: SchedulerRabbitMQ
+            types:
+              - RabbitMq
+    Exchanges:
+        ServiceExchanges:
+            settings-key: SchedulerService-ServiceExchanges
+            types:
+              - JsonArray
+ 
+SlackNotifications:
+    AzureQueue:
+        ConnectionString:
+            settings-key: SlackNotificationsConnString
+            types:
+                - AzureTableStorage
+        QueueName:
+            settings-key: SlackQueueName
+MonitoringServiceClient:
+    MonitoringServiceUrl:
+        settings-key: MonitoringServiceUrl
+
